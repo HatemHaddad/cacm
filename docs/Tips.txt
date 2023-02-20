@@ -1,0 +1,89 @@
+
+### Counting Vlaues in a column ###
+
+df_student_master['GENDER'].value_counts()
+
+
+####################################
+
+### Sort Values by a column or index ###
+
+df_student_master.sort_values(by = "CGPA",ascending = False)
+
+df_student_master.sort_index()
+
+
+#####################################
+
+
+### Create and INDEX COL ###
+
+movies = pd.read_csv('movies.csv',index_col = 'Title')
+
+######################################
+
+### Number of Students ###
+
+len(df_student_master)
+
+#########################
+
+###  Shape and Size ###
+
+df_student_master.size
+df_student_master.shape
+
+#########################
+
+### Data types ###
+
+df_student_master.dtypes
+
+#########################
+
+
+
+### Between two numbers ###
+
+movies["Year"].between(1983, 1986)
+
+###########################
+
+### Lower case a string and find if it contains a word ###
+
+movies.index.str.lower().str.contains("dark")
+
+###########################
+
+
+### Find and replace in python : similar to excel ###
+
+movies["Gross"].str.replace(
+             "$", "", regex = False
+         ).str.replace(",", "", regex = False)
+
+(
+             movies["Gross"]
+            .str.replace("$", "", regex = False)
+            .str.replace(",", "", regex = False)
+            .astype(float)
+         )
+
+#########################################################
+
+
+### Groupby a field and sorting ###
+
+nationality = df_student_master.groupby("NATIONALITY")
+nationality["NATIONALITY"].count()
+
+studios["Gross"].count().sort_values(ascending = False)
+
+###########################
+
+
+### Check ###
+
+studios["Gross"].sum().sort_values(ascending = False).head()
+
+##############
