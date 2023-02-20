@@ -1,0 +1,15 @@
+QUANTITY_DELIVERED = GRN Quantity
+AMOUNT_DELIVERED = GRN Line Amount
+
+QUANTITY_BILLED = Invoice Line Quantity
+AMOUNT_BILLED  = Invoice Line Amount
+
+invoice number
+invoice date
+invoice quantity
+invoice amount 
+invoice rate
+invoice payment date
+invoice approved date
+
+
